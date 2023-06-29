@@ -4,7 +4,8 @@
   "info": {
     "singularName": "resource",
     "pluralName": "resources",
-    "displayName": "resource"
+    "displayName": "resource",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,13 +19,18 @@
       "type": "string"
     },
     "phone": {
-      "type": "integer"
+      "type": "biginteger"
     },
     "department": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::department.department",
       "inversedBy": "resources"
+    },
+    "inDepartment": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }
